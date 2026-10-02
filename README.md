@@ -7,8 +7,8 @@ Create a string stream for parsing and conversion
 if file was opened successfully
     loop through every line in the file
     read the line into a ss
-    seperate by comma, put data in variable
-    repeat previous and place it in different variable
+    seperate by comma, put data in var intA
+    repeat previous and place it in var intB
     clear the ss (string stream)
     place the values in the variables in the ss seperated by spaces
     read values back into ints and get the sum

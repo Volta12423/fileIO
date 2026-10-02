@@ -5,24 +5,30 @@
 
 int main(){
 	//opening a file for output
-	std::ofStream outfile;
-	outFile.open("example.dat");
-	if(outFile.is_open()){
-		outFile << "eggs" << std::endl;
-		outFile << "milk" << std::endl;
-		outFile << "bread" << std::endl;
-		outFile.close()
-	}else{
-		std::cout << "unable to open file" << std::endl;
-	}//end if
+	std::ifStream inFile;
+        std::string currentLine;
+	int intA, intB;
+	std::string text;
+	std::string strA, strB;
+	std::stringstream ss;
+
+	inFile.open("data.csv");
+
+        while (getline(infile, currentLine)){
+           ss.clear();
+	   ss.str("");
+	   ss.str(currentLine);
+
+	   getline(ss, strA, ',');
+	   getline(ss, strB, ',');
+	   getline(ss, text);
+
+	   ss.clear();
+	   ss.str("");
+	   ss << strA << " " << strB;
+	   ss >> intA << intB;
+
+	   int sum = intA + intB;
+
 	
-	//appending to a file
-	//std::ofStream
-	std::ofStream appFile;
-	appFile.open("example.dat", std::ios::app);
-	appFile << "chips" << std::endl;
-	appFile.close();
-	
-	//reading from a file
-	std::ifstream
 }
