@@ -29,4 +29,9 @@ int main(){
 		ss << strA << " " << strB;
 		ss >> intA << intB;
 		int sum = intA + intB;
+		
+		//for loop
+		for(int i = 0;i < sum;i++){
+			std::cout << intB;
+		}
 }
